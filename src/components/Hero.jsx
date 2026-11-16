@@ -7,7 +7,6 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden bg-surface pt-28 lg:pt-0">
       {/* decorative shapes */}
 
-
       <div className="relative mx-auto grid min-h-[100svh] max-w-7xl items-center gap-10 px-5 pb-16 lg:grid-cols-[1.1fr_1fr_.5fr] lg:pb-0">
         <div
           aria-hidden="true"

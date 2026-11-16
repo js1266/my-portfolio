@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
@@ -8,11 +7,9 @@ export default function BackToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
 
-      const progress =
-        scrollable > 0 ? window.scrollY / scrollable : 0;
+      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
 
       setScrollProgress(progress * 100);
       setVisible(window.scrollY > 200);
@@ -42,11 +39,7 @@ export default function BackToTop() {
         bg-white shadow-lg transition-all duration-300
         hover:scale-110 focus:outline-none focus:ring-4
         focus:ring-sky-300
-        ${
-          visible
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none translate-y-5 opacity-0"
-        }`}
+        ${visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-5 opacity-0"}`}
       style={{
         "--water-level": `${100 - scrollProgress}%`,
       }}

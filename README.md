@@ -11,9 +11,6 @@ It includes a downloadable resume and a contact form that delivers messages stra
 
 ---
 
-
-
-
 ## Features
 
 - **Sections:** Hero, About, Projects (filterable), Expertise, Skills, Experience & Education, Contact
@@ -28,13 +25,13 @@ It includes a downloadable resume and a contact form that delivers messages stra
 
 ## Tech stack
 
-| Area      | Tools                                                  |
-| --------- | ------------------------------------------------------ |
-| Frontend  | React 18, Vite, Tailwind CSS                           |
-| Backend   | Node.js, Express, Nodemailer, helmet, express-rate-limit |
-| Quality   | ESLint, Prettier, EditorConfig, PropTypes              |
-| Testing   | Vitest, Testing Library, Supertest                     |
-| CI        | GitHub Actions                                         |
+| Area     | Tools                                                    |
+| -------- | -------------------------------------------------------- |
+| Frontend | React 18, Vite, Tailwind CSS                             |
+| Backend  | Node.js, Express, Nodemailer, helmet, express-rate-limit |
+| Quality  | ESLint, Prettier, EditorConfig, PropTypes                |
+| Testing  | Vitest, Testing Library, Supertest                       |
+| CI       | GitHub Actions                                           |
 
 ## Project structure
 
@@ -76,15 +73,15 @@ Open **http://localhost:5173**. The email API runs on port 5000 and Vite proxies
 
 Copy `.env.example` to `.env` and fill in:
 
-| Variable      | Description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| `SMTP_HOST`   | SMTP server (default `smtp.gmail.com`)                         |
-| `SMTP_PORT`   | SMTP port (default `465`)                                      |
-| `SMTP_SECURE` | `true` for port 465, `false` for 587                           |
-| `SMTP_USER`   | Sending account, e.g. your Gmail address                       |
-| `SMTP_PASS`   | **App Password** (not your normal password)                    |
-| `MAIL_TO`     | Where contact messages are delivered (defaults to `SMTP_USER`) |
-| `PORT`        | API port (default `5000`)                                      |
+| Variable      | Description                                                            |
+| ------------- | ---------------------------------------------------------------------- |
+| `SMTP_HOST`   | SMTP server (default `smtp.gmail.com`)                                 |
+| `SMTP_PORT`   | SMTP port (default `465`)                                              |
+| `SMTP_SECURE` | `true` for port 465, `false` for 587                                   |
+| `SMTP_USER`   | Sending account, e.g. your Gmail address                               |
+| `SMTP_PASS`   | **App Password** (not your normal password)                            |
+| `MAIL_TO`     | Where contact messages are delivered (defaults to `SMTP_USER`)         |
+| `PORT`        | API port (default `5000`)                                              |
 | `CORS_ORIGIN` | Optional, comma-separated origins if the frontend is hosted separately |
 
 **Gmail setup:** Google Account → Security → turn on 2-Step Verification → App passwords → create one and paste it into `SMTP_PASS`.
@@ -104,17 +101,17 @@ If `SMTP_USER` or `SMTP_PASS` is missing, the form returns a clear "Messaging is
 
 ## Scripts
 
-| Command            | Description                                      |
-| ------------------ | ------------------------------------------------ |
-| `npm start`        | Frontend and email API together (development)    |
-| `npm run dev`      | Frontend only                                    |
-| `npm run server`   | Express server (serves `dist/` and the API)      |
-| `npm run build`    | Production build into `dist/`                    |
-| `npm run preview`  | Preview the production build locally             |
-| `npm run lint`     | Run ESLint                                       |
-| `npm run format`   | Format with Prettier                             |
-| `npm test`         | Run the test suite                               |
-| `npm run check`    | Lint, format check, tests and build (same as CI) |
+| Command           | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `npm start`       | Frontend and email API together (development)    |
+| `npm run dev`     | Frontend only                                    |
+| `npm run server`  | Express server (serves `dist/` and the API)      |
+| `npm run build`   | Production build into `dist/`                    |
+| `npm run preview` | Preview the production build locally             |
+| `npm run lint`    | Run ESLint                                       |
+| `npm run format`  | Format with Prettier                             |
+| `npm test`        | Run the test suite                               |
+| `npm run check`   | Lint, format check, tests and build (same as CI) |
 
 ## Testing
 

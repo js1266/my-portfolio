@@ -1,11 +1,8 @@
 import { navLinks, profile } from "../data";
 import Socials from "./Socials";
-import BackToTop from "../components/BackToTop"
+import BackToTop from "../components/BackToTop";
 
 export default function Footer() {
- 
- 
-
   return (
     <>
       <footer className="bg-surface">
@@ -49,8 +46,6 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.name}. All rights reserved.
         </div>
       </footer>
-
-      
 
       <BackToTop />
     </>
