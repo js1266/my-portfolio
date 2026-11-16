@@ -7,8 +7,6 @@ It includes a downloadable resume and a contact form that delivers messages stra
 ![Portfolio preview](./docs/preview.png)
 -->
 
-
-
 **Live site:** `https://your-site-url.com` &nbsp;·&nbsp; **LinkedIn:** [jagadeesh-sahu](https://linkedin.com/in/jagadeesh-sahu) &nbsp;·&nbsp; **GitHub:** [js1266](https://github.com/js1266)
 
 ---
