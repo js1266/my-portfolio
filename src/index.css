@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-body text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-bold;
+  }
+  ::selection {
+    @apply bg-brand text-ink;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-medium text-ink
+      transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-lg hover:shadow-brand/40
+      disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-ink
+      transition-all duration-300 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-ink;
+  }
+  .section-tag {
+    @apply mb-2 block text-sm font-medium uppercase tracking-widest text-brand;
+  }
+  .section-title {
+    @apply text-3xl leading-tight sm:text-4xl;
+  }
+  .card {
+    @apply rounded-2xl border-b-2 border-r border-brand/70 bg-surface transition-all duration-300
+      hover:-translate-y-1.5 hover:shadow-xl hover:shadow-brand/20;
+  }
+  .field {
+    @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-all duration-300
+      placeholder:text-gray-400 focus:border-brand focus:ring-4 focus:ring-brand/20;
+  }
+}
+
+/* scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@keyframes wave-move-back {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave-move-front {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.water-fill {
+  transition: height 0.15s linear;
+}
+
+.wave {
+  top: -9px;
+  height: 12px;
+  max-width: none;
+}
+
+.wave-back {
+  opacity: 0.5;
+  animation: wave-move-back 4s linear infinite;
+}
+
+.wave-front {
+  animation: wave-move-front 2.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-back,
+  .wave-front {
+    animation: none;
+  }
+
+  .water-fill {
+    transition: none;
+  }
+}
