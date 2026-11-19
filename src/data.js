@@ -12,7 +12,7 @@ export const profile = {
   phone: "+91 79782 83226",
   location: "Odisha, India",
   resumeUrl: "/Jagadeesh_Sahu_Resume.pdf",
-  resumeFileName: "Jagadeesh_Sahu_Resume.pdf",
+  resumeFileName: "jagadeesh_sahu_resume.pdf",
   // photo: "public/jagadeesh.png", // e.g. "/me.png" (transparent PNG). Leave empty to show initials.
   yearsExperience: "4.5+",
   socials: {
