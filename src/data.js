@@ -11,7 +11,7 @@ export const profile = {
   email: "jsahu1266@gmail.com",
   phone: "+91 79782 83226",
   location: "Odisha, India",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Jagadeesh_Sahu_Resume.pdf",
   resumeFileName: "Jagadeesh_Sahu_Resume.pdf",
   // photo: "public/jagadeesh.png", // e.g. "/me.png" (transparent PNG). Leave empty to show initials.
   yearsExperience: "4.5+",
